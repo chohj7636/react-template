@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { BrowserRouter } from 'react-router-dom';
 import RootRouter from './routes';
 
 function App() {
@@ -6,7 +7,9 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <RootRouter />
+      <BrowserRouter>
+        <RootRouter />
+      </BrowserRouter>
     </QueryClientProvider>
   );
 }
